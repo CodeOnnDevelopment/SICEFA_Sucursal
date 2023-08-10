@@ -1,0 +1,110 @@
+<!-- codigo creado por  code on development -->
+<html>
+    <head>
+        <title>Principal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../Estilos/home.css" type="text/css"/>
+        <link rel="stylesheet" href="./../Estilos/bootstrap.min.css"/>
+        <link rel="icon" href="./../Imagenes/icono.png"/>
+        <!-- Link bootstrap en caso que no funcione la carpeta -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="./../Imagenes/homeimg/FondoG.svg" alt="Logo" class="d-inline-block align-text-top max-icon-size">
+                    <span class="text-white fs-4" id="sucursalAdmin">
+                        <!-- aqui se generara el nombre de la sucursal cuando ingresamos con algun admin -->
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse justify-content-center" id="navbarScroll">
+                    <ul class="navbar-nav mb-lg-0 justify-content-center" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white " aria-current="page" href="#" onclick="mostrarModuloEnDesarrollo();">
+                                <i class="fa-solid fa-cart-arrow-down icon-with-animation" ></i> Gestión pedidos compra
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#" onclick="mostrarModuloEnDesarrollo();">
+                                <i class="fa-solid fa-comment-dollar icon-with-animation"></i> Gestión Ventas 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="./gestionEmpleados/Empleados.html">
+                                <i class="fa-solid fa-users icon-with-animation"></i> Gestión Empleados
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">
+                                <i class="fa-solid fa-magnifying-glass icon-with-animation"></i> Consulta y búsqueda de productos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="./gestionClientes/clientes.html">
+                                <i class="fa-solid fa-person icon-with-animation"></i> Gestión clientes
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" id="nombreAdmin" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nombreUsuario">
+                                <li> <a class="dropdown-item text-black" href="#"><i class="fa-solid fa-key"></i> Contraseña</a></li>
+                                <li><a class="dropdown-item text-black" href="./../index.html"><i class="fa-solid fa-sign-out"></i> Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Fondo -->
+        <div class="background-gif"></div>
+
+        <div class="contenedor">
+            <div class="col col-lg-5">
+                <div class="text-center"><h1>Bienvenido</h1></div>
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./../Imagenes/homeimg/1.svg" class="d-block w-100" alt="valores">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./../Imagenes/homeimg/2.svg" class="d-block w-100" alt="vision">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./../Imagenes/homeimg/3.svg" class="d-block w-100" alt="mision">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <hr>
+            <h3>CODE ON DEVELOPMENT|Medicamos tu vida S.A.</h3>
+            <p>&copy; 2023 Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="./../js/home.js"></script>
+        <script src="https://kit.fontawesome.com/da9de614d9.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+        
+
+    </body>
+</html>

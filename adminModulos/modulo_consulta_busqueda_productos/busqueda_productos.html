@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>consulta y busqueda de productos </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./../../Imagenes/icono.png"/>
+        <link rel="stylesheet" href="./../../Estilos/bootstrap.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../Estilos/busqueda_productos.css">
+        
+    </head>
+    <body class="fondo_gif">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./../../Imagenes/homeimg/FondoG.svg" alt="Logo" class="d-inline-block align-text-top max-icon-size">
+                    <span class="text-white fs-4" id="nombreCentro">
+                        SICEFA
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse justify-content-center" id="navbarScroll">
+                    <ul class="navbar-nav mb-lg-0 justify-content-center" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="./../home.html">
+                                <i class="fa-solid fa-house"  style="color: #ffffff;"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item" onclick="mostrarModuloEnDesarrollo();">
+                            <a class="nav-link active text-white " aria-current="page" href="#">
+                                <i class="fa-solid fa-cart-arrow-down icon-with-animation"></i> Gestión pedidos compra
+                            </a>
+                        </li>
+                        <li class="nav-item" onclick="mostrarModuloEnDesarrollo();">
+                            <a class="nav-link active text-white" aria-current="page" href="#">
+                                <i class="fa-solid fa-comment-dollar icon-with-animation"></i> Gestión Ventas 
+                            </a>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="./../gestionEmpleados/Empleados.html">
+                                <i class="fa-solid fa-users icon-with-animation"></i> Gestión Empleados
+                            </a>
+                        </li>
+                          <li class="nav-item">
+                              <a class="nav-link active text-white" aria-current="page" href="./../gestionClientes/clientes.html">
+                                <i class="fa-solid fa-person icon-with-animation"></i> Gestión clientes
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" id="nombreUsuario" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nombreUsuario">
+                                <li> <a class="dropdown-item text-black" href="#"><i class="fa-solid fa-key"></i> Contraseña</a></li>
+                                <li><a class="dropdown-item text-black" href="../../index.html"><i class="fa-solid fa-sign-out"></i> Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+         <br>
+        <br>
+        <br>
+        <br>
+        
+        <!-- comienza el buscador  -->
+        <div class="container-fluid">  
+            <div class="row justify-content-center">  
+                <div class="col-lg-10 col-md-10 col-12"> 
+                    <div class="buscar input-group mb-3">
+                        <input type="search" class="form-control" placeholder="Buscar" id="buscar">
+                        <button class="btn btn-primary" type="submit" id="busca"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                            <!-- comienza el boton de ir a reporte de existencia  -->
+
+                    <div class="existencia">
+                        <button type="button" class=" btn btn-primary"  onclick="irAReporteExistencia()"><i class="fa-solid fa-file-lines"></i> Reporte de existencia </button>
+                    </div>
+        <!-- comienza la tabla  -->
+
+                    <div class="container mt-4">
+                        <div class="contenedor-tabla contenedor-tabla-scroll">
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="table-responsive">    
+                                        <div class="a">
+                                            <h1>Productos</h1>
+                                                <table class="table table-success align-middle">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nombre del producto</th>
+                                                            <th scope="col">Nombre generico</th>
+                                                            <th scope="col">forma farmaceutica</th>
+                                                            <th scope="col">codigo de barras</th>
+                                                            <th scope="col">foto</th>
+                                                            <th scope="col">Cantidad</th>
+                                                            <th scope="col">Precio</th>
+                                                            <th scope="col">Estatus</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tblmedicamentos">
+
+                                                    </tbody>
+                                                </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+                <!-- comienza el footer o pie de pagina  -->
+
+        <footer class="footer">
+            <hr>
+            <h3>CODE ON DEVELOPMENT|Medicamos tu vida S.A.</h3>
+            <h6>&copy; 2023 Todos los derechos reservados.</h6>
+        </footer>
+
+        <script src="busqueda_producto.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+        <script src="https://kit.fontawesome.com/da9de614d9.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- codigo creado por  code on development -->
+<html>
+    <head>
+        <title>Bienvenidos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Imagenes/icono.png"/>
+        <link rel="stylesheet" href="./Imagenes/indeximg/fondobody.png" type="text/css"/>
+        <link rel="stylesheet" href="Estilos/indexcss.css" type="text/css"/>
+        <!-- Link bootstrap en caso que el el stilo no funcione -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    </head>
+    <body class="FondoA">
+        <!-- logo -->
+        <img class="logo" src="./Imagenes/indeximg/logoSucursal.png" alt="">
+
+        <div class="containerA">
+            <form id="form" class="login-form">
+                <h1 class="form-titulo">Login</h1>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                        <input type="text" id="usuario" placeholder="Usuario" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" id="password" placeholder="Contraseña" max="7" min="3" name="password" required>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="boton iniciar">
+                        <i class="fas fa-sign-in-alt"></i> <span>Iniciar sesión</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/da9de614d9.js" crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
